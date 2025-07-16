@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoon</title>
+
+    <link rel="stylesheet" href="../spoon_english/style.css">
 </head>
 <body>
     <style>
@@ -121,45 +123,79 @@
                 </div>
                 <div class="spoon_is__right con_3__right">
                     <ul class="list_bg">
-                        <li class="bg_img bg_img_1"><img src="../spoon/imgs/imgi_4_image.png" alt=""></li>
-                        <li class="bg_img bg_img_2"><img src="" alt=""></li>
-                        <li class="bg_img bg_img_3"><img src="" alt=""></li>
-                        <li class="bg_img bg_img_4"><img src="" alt=""></li>
-                        <li class="bg_img bg_img_5"><img src="" alt=""></li>
-                        <li class="bg_img bg_img_6"><img src="" alt=""></li>
+                        <li class="bg_img bg_img_1"><img src="/imgs/imgi_55_image.png" alt=""></li>
+                        <li class="bg_img bg_img_2"><img src="/imgs/imgi_57_image.png" alt=""></li>
+                        <li class="bg_img bg_img_3"><img src="/imgs/imgi_58_image.png" alt=""></li>
+                        <li class="bg_img bg_img_4"><img src="/imgs/imgi_59_image.png" alt=""></li>
+                        <li class="bg_img bg_img_5"><img src="/imgs/imgi_60_image.png" alt=""></li>
+                        <li class="bg_img bg_img_6"><img src="/imgs/imgi_61_image.png" alt=""></li>
                     </ul>
 
                     <ul class="list_scroll">
                         <li>
-                            <span class="sub"></span>
-                            <div class="tit"></div>
+                            <span class="sub">검증된 튜터와 수준 높은 튜터링</span>
+                            <div class="tit">Tutoring</div>
                         </li>
                         <li>
-                            <span class="sub"></span>
-                            <div class="tit"></div>
+                            <span class="sub">한국인을 위해 설계된 자체 커리큘럼</span>
+                            <div class="tit">Curriculum</div>
                         </li>
                         <li>
-                            <span class="sub"></span>
-                            <div class="tit"></div>
+                            <span class="sub">개인 맞춤 영어 컨설팅</span>
+                            <div class="tit">Consulting</div>
                         </li>
                         <li>
-                            <span class="sub"></span>
-                            <div class="tit"></div>
+                            <span class="sub">포기하지 않게 하는 동기부여 코칭</span>
+                            <div class="tit">Coaching</div>
                         </li>
                         <li>
-                            <span class="sub"></span>
-                            <div class="tit"></div>
+                            <span class="sub">다양한 영어 경험 스푼 커뮤니티</span>
+                            <div class="tit">Community</div>
                         </li>
                         <li>
-                            <span class="sub"></span>
-                            <div class="tit"></div>
+                            <span class="sub">일상 속 영어 아지트 스푼 하우스</span>
+                            <div class="tit">Spoon House</div>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-
+        <section class="sec sec_3">
+            <div class="videin">
+                <div class="videin_bg"></div>
+                <div class="videin_top">
+                    <div class="top_mark">영어 세계관 속으로</div>
+                    <div class="top_tit">Vibe in!</div>
+                    <div class="top_txt_box">
+                        <div class="tit">영어문화 커뮤니티</div>
+                        <div class="body">
+                            "배우 남주혁, 아티스트 백현진, 뮤지션 장기하까지!
+                            <br>
+                            이들이 선택한 곳이 스푼 잉글리쉬입니다.
+                            <br>
+                            그런데 여긴 그냥 영어 공부하는 곳이 아니에요.
+                            <br>
+                            <p>강의실이 아닌, 루프탑 파티에서&nbsp;
+                                <img src="" alt="">
+                                영어를 하고,
+                            </p>
+                            <p>영화 감상회에서&nbsp;
+                                <img src="" alt="">
+                                대화를 나누며
+                            </p>
+                            '진짜 영어'를 배워가는 공간이죠."
+                        </div>
+                        <div class="longblack_logo">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="videin_bottom">
+                    
+                </div>
+            </div>
+        </section>
     </div>
     
     
@@ -630,8 +666,8 @@
 
         .sec_2 > .spoon_is.con_3 > .spoon_is__right {
             position: relative;
-            height: 1200px;
-            
+            width: 50%;
+            margin-left: auto;
         }
 
         .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg {
@@ -639,32 +675,164 @@
             top: 0;
             right: 0;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             overflow: hidden;
-            background-color: #0674e2;
         }
 
         .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img {
-            display: block;
             width: 100%;
             height: 100%;
+            background-color: #0674e2;
         }
 
         .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img > img {
-            width: 100%;
-            height: 100%;
-            max-height: 100vh;
+            opacity: 0;
             position: absolute;
             top: 0;
             right: 0;
-            z-index: 100;
-            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            border: 5px solid red;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img_1 > img {
+            top: 30%;
             scale: 1.3;
-            /* top: 30% !important; */
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img_2 > img {
+            top: 10%;
+            left: 10%;
+            scale: 1.3;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_scroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 56px;
+            z-index: 1;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_scroll > li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_scroll > li > .sub {
+            /* font-family: SUIT; */
+            font-size: 16px;
+            line-height: 1;
+            letter-spacing: -.04rem;
+            font-weight: 600;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_scroll > li > .tit {
+            font-family: kepler-std-condensed-display;
+            font-size: 88px;
+            line-height: 1;
+            letter-spacing: -.15rem;
+            font-weight: 500;
+            position: relative;
+            display: inline-block;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_scroll > li > .tit::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 87%;
+            transition: transform .4s ease, transform-origin 0s linear .4s;
+            /* background-color: #fff;
+            transform: scaleX(1);
+            transform-origin: left; */
         }
         /* sec_2 - end */
 
         /* sec_3 - start */
+        .sec_3 > .videin {
+            max-width: 1904px;
+            height: 3670px;
+            max-height: 3670px !important;
+            padding: 140px 0px 1500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 83px;
+            position: relative;
+            overflow-x: hidden;
+            background: #fff;
+            border-bottom: 1px solid #000;
+            transform: translate(0px, 0px);
+        }
+
+        .sec_3 > .videin > .videin_bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff url(/imgs/imgi_77_SP-img-videin-back.svg);
+        }
+
+        .sec_3 > .videin > .videin_top {
+            border: 5px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            z-index: 2;
+        }
+
+        .sec_3 > .videin > .videin_top > .top_mark {
+            width: 100%;
+            height: 77px;
+            background: url(/imgs/imgi_78_SP-videin-union.svg) 50% no-repeat;
+            object-fit: contain;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: SUIT;
+            font-size: 13px;
+            letter-spacing: -.04rem;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .sec_3 > .videin > .videin_top > .top_tit {
+            color: #000;
+            text-align: center;
+            font-family: kepler-std-condensed-display;
+            font-size: 100px;
+            letter-spacing: -.15rem;
+            font-weight: 400;
+            line-height: 80px;
+            margin-bottom: 60px;
+        }
+
+        .sec_3 > .videin > .videin_top > .top_txt_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 40px;
+            font-family: SUIT;
+            font-size: 22px;
+            line-height: 34px;
+            letter-spacing: -.04rem;
+            font-weight: 400;
+        }
+
+        .sec_3 > .videin > .videin_top > .top_txt_box > .tit {
+            line-height: 36px;
+            font-weight: 800;
+        }
         /* sec_3 - end */
         /* main - end */
 

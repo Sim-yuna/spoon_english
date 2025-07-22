@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoon</title>
+    <!-- jquery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- gsap -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <!-- font -->
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
 
@@ -132,7 +136,7 @@
                 </div>
                 <div class="spoon_is__right con_3__right">
                     <ul class="list_bg">
-                        <li class="bg_img bg_img_1"><img src="/imgs/imgi_55_image.png" alt=""></li>
+                        <li class="bg_img bg_img_1 active"><img src="/imgs/imgi_55_image.png" alt=""></li>
                         <li class="bg_img bg_img_2"><img src="/imgs/imgi_57_image.png" alt=""></li>
                         <li class="bg_img bg_img_3"><img src="/imgs/imgi_58_image.png" alt=""></li>
                         <li class="bg_img bg_img_4"><img src="/imgs/imgi_59_image.png" alt=""></li>
@@ -141,7 +145,7 @@
                     </ul>
 
                     <ul class="list_scroll">
-                        <li>
+                        <li class="active">
                             <span class="sub">검증된 튜터와 수준 높은 튜터링</span>
                             <div class="tit">Tutoring</div>
                         </li>
@@ -827,6 +831,12 @@
             border-right: 1px solid #000;
         }
 
+        .sec_2 > .spoon_is.con_3 > .spoon_is__left.sticky {
+            position: fixed;
+            left: 0;
+            /* top: 90px; */
+        }
+
         .sec_2 > .spoon_is.con_3 > .spoon_is__right {
             position: relative;
             width: 50%;
@@ -842,20 +852,53 @@
             overflow: hidden;
         }
 
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg.sticky {
+            position: fixed;
+            width: 50%;
+            right: 0;
+            /* top: 90px; */
+        }
+
         .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img {
+            display: none;
             width: 100%;
             height: 100%;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img.active {
+            display: block;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img.active.bg_img_1 {
             background-color: #0674e2;
         }
 
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img.active.bg_img_2 {
+            background-color: #ff8d8d;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img.active.bg_img_3 {
+            background-color: #f8ae79;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img.active.bg_img_4 {
+            background-color: #8b7de7;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img.active.bg_img_5 {
+            background-color: #0674e2;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img.active.bg_img_6 {
+            background-color: #ff8d8d;
+        }
+
         .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img > img {
-            opacity: 0;
+            opacity: 1;
             position: absolute;
             top: 0;
             right: 0;
-            width: 100%;
             height: 100%;
-            border: 5px solid red;
         }
 
         .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_bg > .bg_img_1 > img {
@@ -875,6 +918,11 @@
             align-items: center;
             gap: 56px;
             z-index: 1;
+        }
+
+        .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_scroll.finish {
+            position: absolute;
+            bottom: 120px;
         }
 
         .sec_2 > .spoon_is.con_3 > .spoon_is__right > .list_scroll > li {
@@ -1321,5 +1369,24 @@
         /* main - end */
 
     </style>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.timeline({
+            scrollTrigger: {
+                scrub: 0,
+                trigger: ".spoon_is.con_3",
+                start: "top 90px",
+                end: "bottom bottom",
+                toggleClass: {
+                    targets: [".spoon_is__left", ".list_bg"],
+                    className: "sticky",
+                },
+            },
+        });
+
+        tl();
+    </script>
 </body>
 </html>

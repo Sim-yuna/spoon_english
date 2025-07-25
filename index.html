@@ -1432,7 +1432,7 @@
                             $(this).addClass("active");
                             $bgItems.eq(i).addClass("active");
                         } else {
-                            // 마지막 li는 active를 유지
+                            // 마지막 li는 active 유지
                             if (i !== lastIndex) {
                                 $(this).removeClass("active");
                                 $bgItems.eq(i).removeClass("active");
@@ -1443,27 +1443,36 @@
             },
         });
 
+        let $cardWrapper = $(".card_wrap");
 
-    //     $(function () {
-    //     gsap.registerPlugin(ScrollTrigger);
+        gsap.to($cardWrapper[0], {
+            x: () => -1 * $cardWrapper[0].scrollWidth,
+            xPercent: 100,
+            scrollTrigger: {
+                trigger: ".videin_bottom",
+                start: "top top+=220px",
+                end: "+=2000px",
+                markers: true,
+                pin: ".videin",
+                scrub: true,
+                invalidateOnRefresh: true,
+                onUpdate: self => {
+                    $(".card_wrap .card").each(function(index) {
+                        const i = [2, -4, 3, -1, 2, 0][index] || 0;
+                        const l = [0, -20, -40, -60, -80, -100][index] || -50;
+                        const a = [0, 20, -30, 20, -20, 10][index] || 20;
 
-    //     ScrollTrigger.create({
-    //         trigger: ".con_3",
-    //         start: "top 90px",
-    //         end: "bottom bottom",
-    //         scrub: 0,
-    //         markers: true,
-
-    //         onEnter: function () {
-    //             $(".spoon_is__left").addClass("sticky");
-    //             $(".list_bg").addClass("sticky");
-    //         },
-    //         onLeaveBack: function () {
-    //             $(".spoon_is__left").removeClass("sticky");
-    //             $(".list_bg").removeClass("sticky");
-    //         }
-    //     });
-    // });
+                        gsap.to(this, {
+                            rotate: i + (-5 + 0.8 * index) * self.progress,
+                            x: l * self.progress,
+                            y: a * self.progress,
+                            duration: 0.3 + 0.1 * index,
+                            ease: "power2.out"
+                        });
+                    });
+                }
+            }
+        });
     </script>
 </body>
 </html>
